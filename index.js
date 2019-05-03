@@ -5,7 +5,7 @@ export default function (kibana) {
 
     uiExports: {
       visTypes: ['plugins/kibana-html-plugin/html'],
-      styleSheetPaths: resolve(__dirname, 'public/index.scss'),
+      styleSheetPaths: require('path').resolve(__dirname, 'public/index.scss'),
     }
 
   });
