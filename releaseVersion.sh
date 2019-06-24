@@ -1,7 +1,7 @@
 # set your token
 #export GITHUB_TOKEN=...
 
-USER="raystorm-place"
+USER="gwintzer"
 REPO="kibana-html-plugin"
 BUILD_VERSION="1"
 SKIP_INSTALL_DEPS="false"
