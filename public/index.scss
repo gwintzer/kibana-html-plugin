@@ -1,3 +1,4 @@
-@import '../../kibana/src/ui/public/styles/_mixins';
+@import '../../../node_modules/@elastic/eui/src/theme_light.scss';
+@import '../../../src/legacy/ui/public/styles/styling_constants'; 
 
 @import './html';
