@@ -1,15 +1,15 @@
 {
   "name": "kibana-html-plugin",
-  "version": "6.7.1-1",
-  "description": "This is a Kibana 6 plugin which renders HTML in visualizations",
+  "version": "7.4.0-1",
+  "description": "This is a Kibana plugin which renders HTML in visualizations",
   "main": "index.js",
   "kibana": {
-    "version": "6.7.1",
+    "version": "kibana",
     "templateVersion": "1.0.0"
   },
   "scripts": {
-    "preinstall": "node ../../kibana/preinstall_check",
-    "kbn": "node ../../kibana/scripts/kbn",
+    "preinstall": "node ../../preinstall_check",
+    "kbn": "node ../../scripts/kbn",
     "lint": "eslint .",
     "start": "plugin-helpers start",
     "test:server": "plugin-helpers test:server",
@@ -17,9 +17,10 @@
     "build": "plugin-helpers build"
   },
   "devDependencies": {
-    "@elastic/eslint-config-kibana": "link:../../kibana/packages/eslint-config-kibana",
-    "@elastic/eslint-import-resolver-kibana": "link:../../kibana/packages/kbn-eslint-import-resolver-kibana",
-    "@kbn/plugin-helpers": "link:../../kibana/packages/kbn-plugin-helpers",
+    "@elastic/eui": "link:../../node_modules/@elastic/eui",
+    "@elastic/eslint-config-kibana": "link:../../packages/eslint-config-kibana",
+    "@elastic/eslint-import-resolver-kibana": "link:../../packages/kbn-eslint-import-resolver-kibana",
+    "@kbn/plugin-helpers": "link:../../packages/kbn-plugin-helpers",
     "babel-eslint": "^8.0.2",
     "eslint": "^4.11.0",
     "eslint-plugin-babel": "^4.1.1",

@@ -16,11 +16,9 @@ Go to releases page for list of available packages
 Plugins are officialy not supported, because of fast code changes even in minor Versions.
 
 The plugin is compatible with following Versions:
-* kibana (=6.3+)
+* kibana (=7.4+)
 
-The plugin is tagged as experimental for the moment :
-- Is necessary to add an option to prevent XSS injection by blocking scripts ?
-- How to manage the CSS style/classes of elements like h1, h2 and others with the core CSS classes that overwriting it ?
+[Manage CSP](https://www.elastic.co/guide/en/kibana/master/production.html#csp-strict-mode) if you want autorize inline script in a production context
 
 
 ## development
