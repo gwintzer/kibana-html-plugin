@@ -6,7 +6,10 @@ export default function (kibana) {
 
     uiExports: {
       visTypes: ['plugins/kibana-html-plugin/html'],
-      styleSheetPaths: [resolve(__dirname, 'public/index.scss')].find(p => existsSync(p)),
+      styleSheetPaths: [
+        resolve(__dirname, 'public/index.scss'), 
+        resolve(__dirname, 'public/index.css')
+      ].find(p => existsSync(p)),
     }
 
   });
