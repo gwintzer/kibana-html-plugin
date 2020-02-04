@@ -8,7 +8,7 @@ import { HtmlVisWrapper } from './html_vis_controller';
 import htmlVisParamsTemplate from './html_vis_params.html';
 
     
-const myVis = () => visFactory.createReactVisualization({
+const htmlVis = () => visFactory.createReactVisualization({
   name: 'html',
   title: 'Html widget',
   icon: 'editorCodeBlock',
@@ -33,8 +33,8 @@ const myVis = () => visFactory.createReactVisualization({
   responseHandler: 'none',
 });
 
-setup.types.registerVisualization(myVis);
+setup.types.registerVisualization(htmlVis);
 
 
 // export the provider so that the visType can be required with Private()
-export default myVis;
+export default htmlVis;
