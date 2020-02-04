@@ -1,6 +1,6 @@
 {
   "name": "kibana-html-plugin",
-  "version": "7.4.0-1",
+  "version": "7.5.2-1",
   "description": "This is a Kibana plugin which renders HTML in visualizations",
   "main": "index.js",
   "kibana": {
