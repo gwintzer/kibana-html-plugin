@@ -51,7 +51,7 @@ echo "Create a package copy as latest..."
 echo
 echo "cp build/${REPO}-${TAG_NAME}.zip build/${REPO}-${TAG_NAME_LATEST}.zip"
 cp build/${REPO}-${TAG_NAME}.zip build/${REPO}-${TAG_NAME_LATEST}.zip
-
+echo
 
 # Create tag and release
 

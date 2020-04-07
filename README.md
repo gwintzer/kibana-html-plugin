@@ -5,6 +5,8 @@ HTML Plugin Widget for Kibana. This Plugin was originally adapted from the Markd
 
 ![preview-edit](/resources/preview-edit.png)
 
+Check out a sample of HTML code [here](/resources/samplecode.html)
+
 ## Install
 
 ```bash
@@ -13,15 +15,14 @@ bin/kibana-plugin install <PATH_OR_URL_TO_YOUR_ZIP_FILE>
 Go to releases page for list of available packages
 
 ## Compatibility
-Plugins are officialy not supported, because of fast code changes even in minor Versions.
 
 The plugin is compatible with following Versions:
-* kibana (=7.4+)
+* kibana (=7.6+)
 
 [Manage CSP](https://www.elastic.co/guide/en/kibana/master/production.html#csp-strict-mode) if you want autorize inline script in a production context
 
 
-## development
+## Development
 
 See the [kibana contributing guide](https://github.com/elastic/kibana/blob/master/CONTRIBUTING.md) for instructions setting up your development environment. Once you have completed that, use the following yarn scripts.
 
@@ -38,17 +39,3 @@ See the [kibana contributing guide](https://github.com/elastic/kibana/blob/maste
       ```
       yarn start --elasticsearch.url http://localhost:9220
       ```
-
-  - `yarn build`
-
-    Build a distributable archive of your plugin.
-
-  - `yarn test:browser`
-
-    Run the browser tests in a real web browser.
-
-  - `yarn test:server`
-
-    Run the server tests using mocha.
-
-For more information about any of these commands run `yarn ${task} --help`. For a full list of tasks checkout the `package.json` file, or run `yarn run`.
