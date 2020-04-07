@@ -1,13 +1,10 @@
-@import 'node_modules/@elastic/eui/src/theme_light';
+@import 'src/legacy/ui/public/styles/styling_constants';
 
-@mixin flex-parent($grow: 1, $shrink: 1, $basis: auto, $direction: column) {
-  flex: $grow $shrink $basis;
-  display: flex;
-  flex-direction: $direction;
+// Prefix all styles with "mkd" to avoid conflicts.
+// Examples
+//   mkdChart
+//   mkdChart__legend
+//   mkdChart__legend--small
+//   mkdChart__legend-isLoading
 
-  > * {
-    flex-shrink: 0;
-  }
-}
-
-@import './html';
+@import './html_vis';

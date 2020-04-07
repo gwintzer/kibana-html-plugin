@@ -17,34 +17,17 @@
  * under the License.
  */
 
-import React, { Component } from 'react';
+import React from 'react';
+import { HtmlVisParams } from './types';
+
+interface HtmlVisComponentProps extends HtmlVisParams {
+  renderComplete: () => {};
+}
 
 /**
- * The HtmlVisComponent renders html to HTML and presents it.
+ * The HtmlVisComponent renders HTML and presents it.
  */
-class HtmlVisComponent extends Component {
-
-  /**
-   * This method will be called when props or the state has been updated, and
-   * we should return whether we want the render method to be called again (true)
-   * or if we know that the render method wouldn't produce anything different and
-   * we don't need it to be called (false).
-   *
-   * We only need to render if one of the parameters used in the render function
-   * actually changed. So we prevent calling render if none of it changed.
-   */
-  shouldComponentUpdate(props) {
-    const shouldUpdate = props.html !== this.props.html;
-
-    // If we won't update, we need to trigger the renderComplete method here,
-    // since we will never render and thus never get to componentDidUpdate.
-    if (!shouldUpdate) {
-      this.props.renderComplete();
-    }
-
-    return shouldUpdate;
-  }
-
+class HtmlVisComponent extends React.Component<HtmlVisComponentProps> {
   /**
    * Will be called after the first render when the component is present in the DOM.
    *
@@ -73,8 +56,8 @@ class HtmlVisComponent extends Component {
    */
   render() {
     return (
-      <div className="html-vis">
-        <div dangerouslySetInnerHTML={{__html: this.props.html}} />
+      <div className="htmlVis" 
+        dangerouslySetInnerHTML={{__html: this.props.html }}>
       </div>
     );
   }
@@ -92,10 +75,12 @@ class HtmlVisComponent extends Component {
  * The way React works, this wrapper nearly brings no overhead, but allows us
  * to use proper lifecycle methods in the actual component.
  */
-export function HtmlVisWrapper(props) {
+export function HtmlVisWrapper(props: any) {
   return (
     <HtmlVisComponent
-      html={props.vis.params.html}
+      html={props.visParams.html}
+      style={props.visParams.style}
+      script={props.visParams.script}
       renderComplete={props.renderComplete}
     />
   );
