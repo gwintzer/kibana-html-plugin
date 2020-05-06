@@ -9,7 +9,7 @@ const htmlPluginInitializer: LegacyPluginInitializer = ({ Plugin }: LegacyPlugin
     require: ['kibana', 'elasticsearch'],
     publicDir: resolve(__dirname, 'public'),
     uiExports: {
-      styleSheetPaths: resolve(__dirname, 'public/index.scss'),
+      styleSheetPaths: resolve(__dirname, 'public/index.css'),
       hacks: [resolve(__dirname, 'public/legacy')],
       injectDefaultVars: server => ({}),
     },
